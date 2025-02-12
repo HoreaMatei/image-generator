@@ -18,7 +18,7 @@ app.use(
 
 app.use(express.json());
 
-app.post("/signup", async (req, res) => {
+app.post("/api/signup", async (req, res) => {
   try {
     const { email, password } = req.body;
     if (
@@ -39,7 +39,7 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-app.post("/login", async (req, res) => {
+app.post("/api/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -55,7 +55,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.post("/generate-image", enforceAuth, async (req, res) => {
+app.post("/api/generate-image", enforceAuth, async (req, res) => {
   const { prompt, options } = req.body;
 
   if (!prompt || prompt.trim().length === 0) {
