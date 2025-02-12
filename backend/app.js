@@ -7,20 +7,18 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
-const options = [
+app.use(
   cors({
     origin: "*",
     methods: "*",
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
-  }),
-];
-
-app.use(options);
+  })
+);
 
 app.use(express.json());
 
-app.post("/api/signup", async (req, res) => {
+app.post("/signup", async (req, res) => {
   try {
     const { email, password } = req.body;
     if (
@@ -68,6 +66,8 @@ app.post("/generate-image", enforceAuth, async (req, res) => {
   res.status(201).send(image);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server running on port ${port}`);
+// });
+
+export default app;

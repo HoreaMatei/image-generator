@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch  --env-file=.env app.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "vercel-build": "echo 'Skipping build step'"
   },
   "keywords": [],
   "author": "",
