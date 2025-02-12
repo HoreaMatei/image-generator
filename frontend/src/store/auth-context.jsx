@@ -1,7 +1,6 @@
 import { createContext, useState, useContext, useEffect } from "react";
 
-const backendPORT =
-  import.meta.env.VITE_BACKEND_URL || "https://img-gen-three.vercel.app";
+const backendPORT = import.meta.env.VITE_BACKEND_URL;
 
 const AuthContext = createContext({
   token: null,
