@@ -14,7 +14,7 @@
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://img-gen-njso.vercel.app"
+          "value": "https://image-generator-f1du.vercel.app/"
         },
         {
           "key": "Access-Control-Allow-Methods",
