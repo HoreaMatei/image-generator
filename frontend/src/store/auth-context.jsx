@@ -66,7 +66,7 @@ export function AuthContextProvider({ children }) {
   }
 
   async function login(email, password) {
-    const response = await fetch(`${backendPORT}/api/login`, {
+    const response = await fetch(`${backendPORT}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
