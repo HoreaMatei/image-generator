@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://image-generator-f1du.vercel.app",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
