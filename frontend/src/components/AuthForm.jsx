@@ -38,8 +38,8 @@ const AuthForm = () => {
 
   const [, action, isPending] = useActionState(submitAction);
   return (
-    <div className=" text-center  ">
-      <h2 className="font-bold text-white text-xl sm:text-2xl lg:text-3xl font-mono mt-10">
+    <div className=" text-center w-[90vw] m-auto ">
+      <h2 className="font-bold  text-white text-xl sm:text-2xl lg:text-3xl font-mono mt-10">
         Login to try it
       </h2>
       <Form
@@ -64,7 +64,7 @@ const AuthForm = () => {
         <p className="flex flex-col gap-3 mt-4">
           <button
             disabled={isPending}
-            className="bg-[#d3d3d3ec] mx-auto  shadow-lg text-black py-2 hover:bg-[#b1aeaeec] disabled:cursor-not-allowed disabled:bg-stone-400 disabled:text-stone-600 w-48 lg:w-80  "
+            className="bg-[#d3d3d3ec] mx-auto  shadow-lg text-black py-1 lg:py-2 hover:bg-[#b1aeaeec] disabled:cursor-not-allowed disabled:bg-stone-400 disabled:text-stone-600 w-32  lg:w-80  "
           >
             {!isPending && authMode === "login"
               ? "Login"

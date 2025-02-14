@@ -12,7 +12,7 @@ const Input = ({ isTextArea, className, ...props }) => {
     <Component
       style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
       className={twMerge(
-        " bg-white p-2 shadow-lg focus:outline-none  ",
+        " bg-white w-60 m-auto p-2 shadow-lg focus:outline-none  ",
         className
       )}
       {...props}
