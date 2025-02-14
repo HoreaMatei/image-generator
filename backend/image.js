@@ -23,5 +23,7 @@ export async function generateImage(prompt, options) {
   const imageBuffer = await imageBlob.arrayBuffer();
   const image = Buffer.from(imageBuffer);
 
+  console.log(output);
+
   return { image, format: imageBlob.type };
 }
