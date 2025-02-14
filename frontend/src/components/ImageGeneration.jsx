@@ -50,26 +50,30 @@ const ImageGeneration = () => {
     result: null,
   });
   return (
-    <div className=" text-center mt-9 lg:mt-28">
-      <div className="flex  flex-col-reverse sm:flex-row items-center gap-0 lg:gap-10 max-w-[70rem] mx-auto ">
+    <div className=" text-center mt-9 lg:mt-24">
+      <div className="flex  flex-col-reverse sm:flex-row  items-center gap-0  lg:gap-10 max-w-[70rem] mx-auto ">
         <Form
           action={action}
           className="flex flex-col w-[22rem] lg:w-[25rem] justify-between gap-8 items-center"
         >
           <div className="flex flex-col gap-4 ">
             <InputContainer>
-              <Label htmlFor="prompt">Image Prompt</Label>
+              <Label htmlFor="prompt" className="ml-0">
+                Image Prompt
+              </Label>
               <Input
                 type="text"
                 id="prompt"
-                className="h-12 "
+                className="h-12 ml-0 "
                 name="prompt"
                 isTextArea={isTextarea}
               />
             </InputContainer>
             <div className="flex gap-5 ">
               <InputContainer>
-                <Label htmlFor="quality  ">Quality</Label>
+                <Label htmlFor="quality  " className="ml-0">
+                  Quality
+                </Label>
                 <Input
                   type="number"
                   id="quality"
@@ -78,11 +82,13 @@ const ImageGeneration = () => {
                   max="100"
                   step="1.0"
                   defaultValue="80"
-                  className="w-[1rem] focus:outline-none  h-8 lg:h-10  "
+                  className=" focus:outline-none  h-8 lg:h-10 w-[5rem] lg:w-[5rem]  "
                 />
               </InputContainer>
               <InputContainer>
-                <Label htmlFor="aspectRatio">Aspect Ratio</Label>
+                <Label htmlFor="aspectRatio" className="ml-0">
+                  Aspect Ratio
+                </Label>
                 <select
                   id="aspectRatio"
                   name="aspectRatio"
@@ -96,7 +102,9 @@ const ImageGeneration = () => {
                 </select>
               </InputContainer>
               <InputContainer>
-                <Label htmlFor="format">Format</Label>
+                <Label className="ml-0" htmlFor="format">
+                  Format
+                </Label>
                 <select
                   style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
                   id="format"

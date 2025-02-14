@@ -47,12 +47,16 @@ const AuthForm = () => {
         className="max-w-[25rem] bg-[#ffffff10] mt-10 mx-auto"
       >
         <InputContainer>
-          <Label htmlFor="email">Email</Label>
+          <Label className=" w-64 lg:w-80 m-auto mb-2" htmlFor="email">
+            Email
+          </Label>
           <Input className="h-8 lg:h-10" type="email" id="email" name="email" />
         </InputContainer>
 
         <InputContainer>
-          <Label htmlFor="password">Password</Label>
+          <Label className=" w-64 lg:w-80 m-auto mb-2" htmlFor="password">
+            Password
+          </Label>
           <Input
             className="h-8 lg:h-10"
             type="password"
