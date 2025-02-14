@@ -62,7 +62,7 @@ const ImageGeneration = () => {
               <Input
                 type="text"
                 id="prompt"
-                className="h-12 w-72"
+                className="h-12 "
                 name="prompt"
                 isTextArea={isTextarea}
               />
