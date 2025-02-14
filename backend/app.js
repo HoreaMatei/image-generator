@@ -14,6 +14,8 @@ app.use(
     credentials: true, // Allow cookies and authorization headers
   })
 );
+
+app.options("*", cors());
 app.post("/api/signup", async (req, res) => {
   try {
     const { email, password } = req.body;
