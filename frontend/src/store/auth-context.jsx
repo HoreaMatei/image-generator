@@ -1,6 +1,6 @@
 import { createContext, useState, useContext, useEffect } from "react";
 
-const backendPORT = "https://image-generator-production-52ed.up.railway.app";
+const backendPORT = import.meta.env.VITE_BACKEND_URL;
 
 const AuthContext = createContext({
   token: null,
