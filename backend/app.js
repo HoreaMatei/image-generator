@@ -10,8 +10,11 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://image-generator-3h9j.vercel.app", // Your frontend URL
-    credentials: true, // Allow cookies and authorization headers
+    origin: [
+      "https://image-generator-3h9j.vercel.app",
+      "http://localhost:5173",
+    ],
+    credentials: true,
   })
 );
 

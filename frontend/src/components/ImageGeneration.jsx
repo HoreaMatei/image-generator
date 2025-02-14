@@ -78,7 +78,7 @@ const ImageGeneration = () => {
                   max="100"
                   step="1.0"
                   defaultValue="80"
-                  className="w-[4rem] focus:outline-none  h-8 lg:h-10  "
+                  className="w-[1rem] focus:outline-none  h-8 lg:h-10  "
                 />
               </InputContainer>
               <InputContainer>
