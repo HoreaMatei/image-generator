@@ -9,10 +9,10 @@ import ParticlesComponent from "./components/Particles";
 function App() {
   const { token } = useAuthContext();
   return (
-    <div className="bg-stone-800 min-h-screen py-8">
+    <div className="bg-stone-800 min-h-screen  py-8">
       <ParticlesComponent />
       <Header />
-      <main className="mt-12 relative">
+      <main className="mt-12  relative">
         {" "}
         {!token ? <AuthForm /> : <ImageGeneration />}
       </main>

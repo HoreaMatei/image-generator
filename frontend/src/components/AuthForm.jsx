@@ -38,7 +38,7 @@ const AuthForm = () => {
 
   const [, action, isPending] = useActionState(submitAction);
   return (
-    <div className=" text-center w-[90vw] m-auto  ">
+    <div className=" text-center w-[90vw] m-auto ">
       <h2 className="font-bold  text-white text-xl sm:text-2xl lg:text-3xl font-mono mt-10">
         Login to try it
       </h2>
