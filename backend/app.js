@@ -6,18 +6,14 @@ import cors from "cors";
 const port = process.env.PORT || 3000;
 
 const app = express();
+app.use(express.json());
 
 app.use(
   cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
+    origin: "https://image-generator-3h9jdsadas.vercel.app", // Your frontend URL
+    credentials: true, // Allow cookies and authorization headers
   })
 );
-
-app.use(express.json());
-
 app.post("/api/signup", async (req, res) => {
   try {
     const { email, password } = req.body;
