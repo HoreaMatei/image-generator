@@ -5,7 +5,7 @@ const Label = ({ htmlFor, className, children }) => {
     <label
       htmlFor={htmlFor}
       className={twMerge(
-        "text-stone-50 font-bold mb-1 text-left text-xs ml-5 uppercase",
+        "text-stone-50 font-bold mb-1 text-left text-xs w-60 m-auto  uppercase",
         className
       )}
     >
