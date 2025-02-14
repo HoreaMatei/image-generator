@@ -5,7 +5,7 @@ import InputContainer from "./InputContainer";
 import Label from "./Label";
 import { useAuthContext } from "../store/auth-context";
 
-const backendPORT = "http://localhost:3000";
+const backendPORT = import.meta.env.VITE_BACKEND_URL;
 
 async function sendImageRequest(prompt, options, authToken) {
   const response = await fetch(`${backendPORT}/api/generate-image`, {
