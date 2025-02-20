@@ -46,24 +46,29 @@ export function AuthContextProvider({ children }) {
   }, []);
 
   async function signup(email, password) {
-    const response = await fetch(`${backendPORT}/api/signup`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-      credentials: "include",
-    });
+    try {
+      const response = await fetch(`${backendURL}/api/signup`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+        credentials: "include",
+      });
 
-    const resData = await response.json();
-    if (!response.ok) {
-      throw new Error(resData.message || "Creating a user failed.");
+      if (!response.ok) {
+        const resData = await response.json();
+        throw new Error(resData.message || "Creating a user failed.");
+      }
+
+      const resData = await response.json();
+      setToken(resData.token);
+      saveToken(resData.token);
+    } catch (error) {
+      console.error("Signup error:", error); // Add logging
+      throw error; // Re-throw to be caught by the form
     }
-
-    setToken(resData.token);
-    saveToken(resData.token);
   }
-
   async function login(email, password) {
     const response = await fetch(`${backendPORT}/api/login`, {
       method: "POST",
