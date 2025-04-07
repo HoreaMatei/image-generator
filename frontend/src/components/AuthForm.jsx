@@ -38,13 +38,13 @@ const AuthForm = () => {
 
   const [, action, isPending] = useActionState(submitAction);
   return (
-    <div className=" text-center w-[90vw] m-auto ">
+    <div className=" text-center w-[90vw] m-auto">
       <h2 className="font-bold  text-white text-xl sm:text-2xl lg:text-3xl font-mono mt-10">
         Login to try it
       </h2>
       <Form
         action={action}
-        className="max-w-[25rem] bg-[#ffffff10] mt-10 mx-auto"
+        className="max-w-[25rem] bg-[#ffffff10]  mt-10 mx-auto"
       >
         <InputContainer>
           <Label className=" w-64 lg:w-80 m-auto mb-2" htmlFor="email">

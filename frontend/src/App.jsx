@@ -12,7 +12,7 @@ function App() {
     <div className="bg-stone-800 min-h-screen  py-8">
       <ParticlesComponent />
       <Header />
-      <main className="mt-12  relative">
+      <main className="mt-12  relative h-[70vh]">
         {" "}
         {!token ? <AuthForm /> : <ImageGeneration />}
       </main>
